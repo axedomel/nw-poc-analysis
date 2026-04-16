@@ -1,6 +1,14 @@
 # nw-poc-analysis
 
+**🇵🇱 Polski** | [🇬🇧 English](README.en.md)
+
 NetWitness NDR 12.x PoC traffic analysis tool — odpytuje Concentrator i Decoder przez SDK (`/sdk?msg=values`), liczy podstawowe metryki jakościowe i ilościowe ruchu, generuje jednoplikowy raport HTML z wykresami (Chart.js) i sortowalnymi tabelami.
+
+Dwie wersje językowe:
+- [`nw_poc_analysis.py`](nw_poc_analysis.py) — polska (komunikaty, etykiety, raport)
+- [`nw_poc_analysis_en.py`](nw_poc_analysis_en.py) — angielska
+
+Logika identyczna, różnią się tylko stringami UI.
 
 ## Użycie
 
