@@ -24,7 +24,7 @@ Tested on RHEL 8/9. Runs on ESA Primary or Admin Server without additional setup
 
 | File | Description |
 |------|-------------|
-| `nw_poc_v2_7.py` | Main script (internal build v2.7) |
+| `nw_poc.py` | Main script  |
 | `hypotheses_data.py` | Hypothesis database — keep in same directory |
 | `nw_poc_launcher.py` | Interactive wizard — recommended entry point |
 
@@ -39,9 +39,9 @@ python3 nw_poc_launcher.py
 The wizard walks through all options and builds the command. For direct use:
 
 ```bash
-python3 nw_poc_v2_7.py \
+python3 nw_poc.py \
   --concentrator 192.168.1.112 \
-  --user admin --password netwitness \
+  --user admin --password YOUR_PASSWORD \
   --client "Acme Corp" \
   --hours 336 \
   --report all \

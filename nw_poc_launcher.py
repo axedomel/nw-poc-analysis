@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 NetWitness PoC Analysis — Interactive Launcher
-Guides the user through all options and runs nw_poc_v2_7.py. (PoC Analysis Tool v0.9)
+Guides the user through all options and runs nw_poc.py. (PoC Analysis Tool v0.9)
 
 Usage:
     python3 nw_poc_launcher.py
@@ -73,15 +73,15 @@ def main():
     print(_c("1;37", "  ║   v0.9                                            ║"))
     print(_c("1;37", "  ╚══════════════════════════════════════════════════╝"))
     print()
-    print(_c("90", "  This wizard builds and runs nw_poc_v2_7.py  [v0.9]"))
+    print(_c("90", "  This wizard builds and runs nw_poc.py  [v0.9]"))
     print(_c("90", "  Press Enter to accept defaults shown in [brackets]."))
 
     # ── 1. Connection ─────────────────────────────────────────
     header("1 / 6  Connection")
     concentrator = ask("Concentrator IP or hostname", default="192.168.1.112")
     conc_port    = ask("Concentrator port", default="50105")
-    user         = ask("Username", default="admin")
-    password     = ask("Password", secret=True) or "netwitness"
+    user         = ask("Username", default="")
+    password     = ask("Password", secret=True)
 
     session_size = ask(
         "Max sessions to fetch (current limit)",
@@ -173,7 +173,7 @@ def main():
         cache_arg = ask("Cache file path", default=default_cache)
 
     # ── Build command ─────────────────────────────────────────
-    script = os.path.join(os.path.dirname(os.path.abspath(__file__)), "nw_poc_v2_7.py")
+    script = os.path.join(os.path.dirname(os.path.abspath(__file__)), "nw_poc.py")
 
     cmd = [
         sys.executable, script,
